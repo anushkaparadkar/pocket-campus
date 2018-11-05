@@ -95,7 +95,7 @@ export default {
     // eslint-disable-next-line
     makeLink() {
       // eslint-disable-next-line
-      return '/users/' + this.user._id + '/dashboard'
+      return '/users/' + this.$store.getters.getUser._id + '/dashboard'
     }
   }
 }

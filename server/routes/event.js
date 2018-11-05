@@ -106,6 +106,8 @@ router.post('/events/:id/register', function(req, res) {
           req.body.event.name +
           '!</b> <p></p> Here are the complete event details, <br> Name: ' +
           req.body.event.name +
+          '<br> Description: ' +
+          req.body.event.description +
           '<br> Time and Date: ' +
           req.body.event.date +
           '</p>',

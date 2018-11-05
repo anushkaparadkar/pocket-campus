@@ -14,8 +14,8 @@
                 <v-select :items="years" :rules="rules" label="Year" v-model="year"></v-select>
                 <v-select :items="branches" :rules="rules" label="Branch" v-model="branch"></v-select>
                 <v-text-field v-model="collegeName" type="text" :rules="rules" label="College Name" required></v-text-field>
-                <v-slider v-model="attendanceCriteria" :rules="rules" thumb-label label="Attendance Criteria"></v-slider>
-                <v-btn color="indigo white--text" disabled="!valid" @click.prevent="signup">Register</v-btn>
+                <v-slider v-model="attendanceCriteria" thumb-label label="Attendance Criteria"></v-slider>
+                <v-btn color="indigo white--text" :disabled="!valid" @click.prevent="signup">Register</v-btn>
               </v-form>
               <p class="my-2">Already A User?
                 <router-link class="log-link" to="/login">Login!</router-link>

@@ -16,7 +16,7 @@
               <v-list>
                 <v-list-tile ripple v-for="lecture in subject.lectures" :key="lecture.date" :to="lectureLink+lecture._id">
                   <v-list-tile-content>
-                    <v-list-tile-title>{{lecture.date.substring(0,10)}}</v-list-tile-title>
+                    <v-list-tile-title>{{new Date(lecture.date).toString()}}</v-list-tile-title>
                     <v-list-tile-sub-title>
                       {{lecture.description}}
                     </v-list-tile-sub-title>
@@ -39,7 +39,7 @@
                 <v-list-tile ripple v-for="submission in subject.submissions" :key="submission.title">
                   <v-list-tile-content>
                     <v-list-tile-title>{{submission.title}}</v-list-tile-title>
-                    <v-list-tile-sub-title>{{submission.dueDate.substring(0,10)}}</v-list-tile-sub-title>
+                    <v-list-tile-sub-title>{{submission.duedate}}</v-list-tile-sub-title>
                   </v-list-tile-content>
                 </v-list-tile>
               </v-list>

@@ -12,7 +12,7 @@
             <v-datetime-picker label="Date and Time" :rules="rules" v-model="event.date">
             </v-datetime-picker>
             <div class="my-2 mx-auto">
-              <v-btn @click="submit" disabled="!valid" color="indigo white--text">Add New Event</v-btn>
+              <v-btn @click="submit" :disabled="!valid" color="indigo white--text">Add New Event</v-btn>
             </div>
           </v-form>
         </v-flex>
