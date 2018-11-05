@@ -7,8 +7,8 @@
           <v-form ref="form" lazy-validation>
             <v-textarea v-model="reminder.title" label="Title" required></v-textarea>
             <v-textarea v-model="reminder.description" label="Reminder Description"></v-textarea>
-            <div class="subheading mb-2">Due Date:</div>
-            <v-date-picker v-model="reminder.time" reactive required></v-date-picker>
+            <v-datetime-picker label="Date and Time" v-model="reminder.time">
+            </v-datetime-picker>
             <div class="my-2 mx-auto">
               <v-btn @click.stop="submit" color="indigo" dark>Add New Reminder</v-btn>
             </div>

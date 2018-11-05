@@ -10,9 +10,9 @@
               </v-avatar>
             </v-card-title>
             <v-card-text>
-              <h1>Ryan Dsilva</h1>
-              <h3 class="subheading">Third Year, IT</h3>
-              <h3 class="subheading">Fr. Conceicao Rodrigues College of Engineering</h3>
+              <h1>{{user.name}}</h1>
+              <h3 class="subheading">{{user.year}} | {{user.branch}}</h3>
+              <h3 class="subheading">{{user.collegeName}}</h3>
             </v-card-text>
           </v-card>
         </v-flex>
@@ -50,7 +50,7 @@
         <v-flex xs12>
           <h3 class="text-xs-center">Attendance Meter</h3>
           <v-tooltip bottom>
-            <v-progress-linear slot="activator" background-color="success" color="info" :value="userAttendance" height="20">
+            <v-progress-linear slot="activator" background-color="error" color="success" :value="userAttendance" height="20">
             </v-progress-linear>
             <span>{{userAttendance}}</span>
           </v-tooltip>
@@ -116,6 +116,7 @@ export default {
   // eslint-disable-next-line
   data() {
     return {
+      user: {},
       reminders: [],
       submissions: [],
       subjects: [],
@@ -149,6 +150,7 @@ export default {
   created() {
     axios.get('/users/' + this.$route.params.id + '/dashboard').then(res => {
       const data = res.data
+      this.user = data
       this.reminders = data.reminders
       this.attendedLects = data.attendance
       this.subjects = data.subjects

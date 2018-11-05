@@ -7,11 +7,6 @@ const LocalStrategy = require('passport-local');
 
 //Models
 const User = require('./models/user');
-const Event = require('./models/event');
-const Lecture = require('./models/lecture');
-const Reminder = require('./models/reminder');
-const Subject = require('./models/subject');
-const Submission = require('./models/submission');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,7 +30,7 @@ const bookRoutes = require('./routes/books');
 const lectureRoutes = require('./routes/lectures');
 
 const port = process.env.PORT || 3000;
-const db = process.env.DATABASEURL || 'mongodb://localhost/scheduletracker';
+const db = process.env.DATABASEURL || 'mongodb://localhost/anupk';
 
 mongoose.connect(db);
 

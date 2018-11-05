@@ -43,6 +43,8 @@ export default {
           this.$session.start()
           this.$session.set('user', data)
           localStorage.setItem('user', JSON.stringify(data))
+          this.$store.commit('setCurrentUser', JSON.stringify(data))
+          this.$store.commit('setIsLoggedIn', true)
           this.$router.push('/users/' + data._id + '/dashboard')
         })
         .catch(err => {

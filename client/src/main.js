@@ -4,6 +4,7 @@ import VueSession from 'vue-session'
 import axios from 'axios'
 import Vuetify from 'vuetify'
 import FullCalendar from 'vue-full-calendar'
+import DatetimePicker from 'vuetify-datetime-picker'
 import 'vuetify/dist/vuetify.min.css'
 import 'fullcalendar/dist/fullcalendar.css'
 import App from './App'
@@ -17,6 +18,7 @@ axios.defaults.baseURL = 'http://localhost:3000'
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 Vue.use(FullCalendar)
+Vue.use(DatetimePicker)
 
 /* eslint-disable no-new */
 new Vue({

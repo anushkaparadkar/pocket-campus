@@ -8,7 +8,7 @@ const LocalStrategy = require('passport-local');
 router.post('/register', function(req, res) {
   var newUser = new User({
     username: req.body.username,
-    uImage: req.body.uImage,
+    //uImage: req.body.uImage,
     email: req.body.email,
     name: req.body.name,
     collegeName: req.body.collegeName,
@@ -82,11 +82,6 @@ router.put('/users/:id/edit', function(req, res) {
       res.status(200).json(updatedUser);
     }
   });
-});
-
-//attendance
-router.get('/users/:id/getAttendance', function(req, res) {
-  // TODO: Add Proper Logic
 });
 
 module.exports = router;

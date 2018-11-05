@@ -7,8 +7,8 @@
           <v-form ref="form" lazy-validation>
             <v-text-field v-model="submission.title" label="Title" required></v-text-field>
             <v-textarea v-model="submission.description" label="Subject"></v-textarea>
-            <div class="subheading mb-2">Due Date:</div>
-            <v-date-picker v-model="submission.dueDate" reactive required></v-date-picker>
+            <v-datetime-picker label="Date and Time" v-model="submission.duedate">
+            </v-datetime-picker>
             <div class="my-2 mx-auto">
               <v-btn @click="submit" color="indigo" dark>Add New Submission</v-btn>
             </div>

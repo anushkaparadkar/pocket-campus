@@ -25,7 +25,7 @@ router.post('/events/add', function(req, res) {
       event.type = req.body.event.type;
       event.description = req.body.event.description;
       event.date = req.body.event.date;
-      event.eventImage = req.body.event.eventImage;
+      //event.eventImage = req.body.event.eventImage;
       event.host = req.body.event.host;
       event.save();
       res.status(200).json(event);
@@ -98,10 +98,17 @@ router.post('/events/:id/register', function(req, res) {
         }
       });
       transporter.sendMail({
-        from: 'byteme.kjsce@gmail.com',
+        from: 'pocketcampus@gmail.com',
         to: user.email,
         subject: 'Event Registration Complete',
-        html: '<b>Thank you for registering!</b>',
+        html:
+          '<b>Thank you for registering for ' +
+          req.body.event.name +
+          '!</b> <p></p> Here are the complete event details, <br> Name: ' +
+          req.body.event.name +
+          '<br> Time and Date: ' +
+          req.body.event.date +
+          '</p>',
       });
     }
   });

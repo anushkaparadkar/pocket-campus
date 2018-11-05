@@ -21,7 +21,6 @@ router.post('/users/:id/subjects/:subject_id/lectures/add', function(req, res) {
             if (err) {
               res.status(500).json(err);
             } else {
-              lecture.date = req.body.lecture.date;
               lecture.description = req.body.lecture.description;
               lecture.save();
               subject.lectures.push(lecture);

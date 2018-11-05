@@ -13,6 +13,14 @@ const store = new Vuex.Store({
     getUser: state => {
       return JSON.parse(state.user)
     }
+  },
+  mutations: {
+    setCurrentUser(state, val) {
+      state.user = val
+    },
+    setIsLoggedIn(state, val) {
+      state.isLoggedIn = val
+    }
   }
 })
 

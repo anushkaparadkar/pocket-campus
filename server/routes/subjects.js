@@ -3,23 +3,6 @@ var router = express.Router();
 var Subject = require('../models/subject');
 var User = require('../models/user');
 
-//show all
-// router.get('/users/:id/subjects', function(req, res) {
-//   User.findById(req.params.id, function(err, user) {
-//     if (err) {
-//       res.status(500).json(err);
-//     } else {
-//       Subject.find({}, function(err, subjects) {
-//         if (err) {
-//           res.status(500).json(err);
-//         } else {
-//           res.status(200).json(subjects);
-//         }
-//       });
-//     }
-//   });
-// });
-
 //create new subject
 router.post('/users/:id/subjects/add', function(req, res) {
   User.findById(req.params.id, function(err, user) {
