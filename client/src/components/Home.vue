@@ -1,22 +1,23 @@
 <template>
   <div id="index-page">
-    <section id="hero-kollab">
+    <section id="hero">
       <v-container>
         <v-layout row wrap>
-          <v-flex sm12 md6 class="text-xs-center mx-auto">
+          <v-flex sm12 md12>
             <div id="title-heading">
-              <h1>Pocket Kampus</h1>
-              <h3 class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, perferendis? Iure quam ducimus, a nam quia quasi nemo illo harum nihil maiores corrupti molestias ipsum aliquid quo! Dolor, quae molestiae!</h3>
-              <br>
+              <h1>Pocket Campus</h1>                       
+                      <br>
               <v-btn to="/register" large color="deep-purple darken-1" raised dark>Get Started!</v-btn>
               <br>
             </div>
           </v-flex>
+
         </v-layout>
       </v-container>
     </section>
     <br>
-  </div>
+
+    </div>
 </template>
 
 <script>
@@ -29,23 +30,24 @@ export default {
 #index-page {
   background-color: #ffffff;
 }
-#hero-kollab {
-  background-image: url('../assets/welcome-bg.png');
+#hero {
+  background-image: url('../assets/img1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 10em;
+  min-height: 550px;
+  image-rendering: auto;
 }
 #title-heading {
-  margin-top: 9em;
+padding: 15%;
   text-align: center;
   h1 {
     font-size: 5em;
-    color: #ffffff;
-    padding: 0.1rem;
+    color:black;
   }
   .subheading {
-    color: #e4e4e4;
+    color: black;
+    font-weight: 700;
   }
 }
 @media only screen and (max-width: 600px) {

@@ -6,7 +6,7 @@
           <v-container fill-height fluid>
             <v-layout fill-height>
               <v-flex xs12 mx-auto align-center flexbox>
-                <span class="headline">MEP</span>
+                <span class="headline">IP</span>
               </v-flex>
             </v-layout>
           </v-container>
