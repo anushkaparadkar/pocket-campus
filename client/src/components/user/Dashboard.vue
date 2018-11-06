@@ -169,6 +169,15 @@ export default {
           })
       })
     })
+  },
+  beforeUpdate(){
+    axios.get('/users/' + this.$route.params.id + '/dashboard').then(res => {
+      const data = res.data
+      this.user = data
+      this.reminders = data.reminders
+      this.attendedLects = data.attendance
+      this.subjects = data.subjects
+    })
   }
 }
 </script>

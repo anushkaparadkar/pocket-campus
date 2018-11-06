@@ -55,20 +55,6 @@ export default {
         this.error = err.message
       })
   },
-  beforeUpdate() {
-    this.events = []
-    axios
-      .get('/events')
-      .then(res => {
-        const data = res.data
-        data.forEach(event => {
-          this.events.push(event)
-        })
-      })
-      .catch(err => {
-        this.error = err.message
-      })
-  }
 }
 </script>
 
