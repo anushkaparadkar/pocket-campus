@@ -75,6 +75,19 @@ export default {
         this.subject = data
       })
   },
+  beforeUpdate() {
+    axios
+      .get(
+        '/users/' +
+          this.$route.params.id +
+          '/subjects/' +
+          this.$route.params.subject_id
+      )
+      .then(res => {
+        const data = res.data
+        this.subject = data
+      })
+  },
   computed: {
     subAdd() {
       return (

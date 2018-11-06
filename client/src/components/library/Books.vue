@@ -54,6 +54,20 @@ export default {
       .catch(err => {
         this.error = err.message
       })
+  },
+  beforeUpdate() {
+    this.books = []
+    axios
+      .get('/library/books')
+      .then(res => {
+        const data = res.data
+        data.forEach(book => {
+          this.books.push(book)
+        })
+      })
+      .catch(err => {
+        this.error = err.message
+      })
   }
 }
 </script>
